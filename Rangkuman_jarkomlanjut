@@ -1,0 +1,199 @@
+Nama : Tegar tama wisnusesa 
+Nim : 20210801238
+Prodi : Teknik informatika 
+Matkul : Jaringan computer lanjut 
+
+RANGKUMAN 
+
+Pada sesi pertama pada mata kuliah jaringan computer lanjut ( Jarkom Lanjut) Dosen mengarahkan semua mahasiswa untuk pembelajaran praktikumnya menggunakan alat jaringan seperti ; Mikrotik ,Switch dan Kabel LAN untuk dipergunakan dalam praktikum selanjutnya .yang Dimana pada sesi awal hanya memberikan penjelasan pengertian pada alat-alat yang akan digunakan besok
+Sesi selanjutan jaringan computer lanjut Dosen memberi pembelajaran praktikum tentang menjelaskan WAN,LAN, ROUTER dan  IP Address adalah sebuah deretan biner yang digunakan sebagai pengenal unik setiap perangkat yang terhubung ke jaringan internet atau jaringan local.serta menjelaskan fungsi dan kegunaan ip address yang nantinya di aplikasikan.
+Selanjutnya jaringan computer lanjut Dosen Mempertanyakn untuk alat-alat kemarin yang akan digunakan praktikum yang Dimana pada sesi ini Kita mempelajari tentang ip address yang Dimana kmarin sudah dijelaskan dan sesi ini tinggal di praktikan mempelajari seperti ;
+Hal-Hal yang Dipelajari tentang IP Address
+1.	Jenis-jenis IP Address:
+IPv4 (Internet Protocol version 4):
+•	Format: 32-bit (contoh: 192.168.1.1).
+•	Terdiri dari empat segmen angka yang dipisahkan oleh titik, dengan nilai masing-masing segmen antara 0-255.
+•	Terbatas hanya sekitar 4,3 miliar alamat unik.
+o	IPv6 (Internet Protocol version 6):
+•	Format: 128-bit (contoh: 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+•	Dirancang untuk menggantikan IPv4 karena keterbatasan alamatnya.
+•	Memiliki jumlah alamat yang sangat besar, cukup untuk kebutuhan masa depan.
+2.	Klasifikasi IP Address:
+•	Public IP Address: Dapat diakses di internet dan diberikan oleh ISP (Internet Service Provider).
+•	Private IP Address: Digunakan dalam jaringan lokal (LAN) dan tidak bisa diakses langsung dari internet.
+•	Static IP Address: IP yang tetap (tidak berubah) dan sering digunakan untuk server atau perangkat jaringan penting.
+•	Dynamic IP Address: IP yang berubah-ubah, biasanya dikelola oleh DHCP (Dynamic Host Configuration Protocol).
+3.	Subnetting:
+•	Teknik untuk membagi jaringan besar menjadi jaringan lebih kecil menggunakan subnet mask.
+•	Tujuan: meningkatkan efisiensi, keamanan, dan pengelolaan jaringan.
+4.	Fungsi dan Tujuan IP Address:
+•	Identifikasi: Menentukan perangkat dalam jaringan.
+•	Lokasi: Mengidentifikasi lokasi geografis perangkat (dalam konteks IP publik).
+•	Komunikasi: Memungkinkan transfer data antara perangkat.
+5.	Pengalamatan Kelas (Classful Addressing):
+Kelas A, B, C, D, dan E, dengan setiap kelas memiliki rentang alamat dan tujuan tertentu.
+Contoh:
+•	Kelas A: 0.0.0.0 – 127.255.255.255 (untuk jaringan besar).
+•	Kelas C: 192.0.0.0 – 223.255.255.255 (untuk jaringan kecil).
+6.	Protokol Terkait:
+•	DHCP (Dynamic Host Configuration Protocol): Mengelola pengalokasian IP Address secara otomatis.
+•	NAT (Network Address Translation): Mengubah IP Address private menjadi public untuk komunikasi internet.
+•	ARP (Address Resolution Protocol): Mengonversi alamat IP ke alamat MAC (Media Access Control).
+7.	CIDR (Classless Inter-Domain Routing):
+•	Pendekatan pengalamatan IP tanpa mempertimbangkan batasan kelas tertentu.
+Contoh: 192.168.1.0/24, di mana /24 menunjukkan jumlah bit untuk subnet mask.
+Lalu selanjutnya mempelajari subnet mask adalah sebuah kombinasi angka yang digunakan dalam jaringan computer untuk membagi jaringan ip menjadi sub-jaringan yang lebih kecil.
+Hal yang Dipelajari tentang Subnet Mask:
+1.	Format Subnet Mask: Ditulis dalam notasi desimal bertitik (misalnya, 255.255.255.0) atau notasi CIDR (misalnya, /24).
+2.	Fungsi Utama:
+•	Membagi jaringan besar menjadi jaringan yang lebih kecil (subnet).
+•	Mengatur routing data di dalam dan antar jaringan.
+3.	Kelas IP dan Default Subnet Mask:
+•	Kelas A: 255.0.0.0 (/8)
+•	Kelas B: 255.255.0.0 (/16)
+•	Kelas C: 255.255.255.0 (/24)
+4.	Perhitungan Subnet:
+•	Menentukan jumlah subnet dan host per subnet.
+•	Menggunakan operasi bitwise antara alamat IP dan subnet mask.
+5.	Subnetting:
+•	Proses membagi alamat IP menjadi beberapa bagian yang lebih kecil.
+•	Berguna untuk efisiensi alokasi IP dalam jaringan.
+6.	Supernetting:
+•	Penggabungan beberapa subnet menjadi satu jaringan yang lebih besar untuk menyederhanakan routing.
+7.	Keamanan dan Isolasi:
+•	Subnet mask memungkinkan pengelompokan perangkat untuk meminimalkan risiko akses tidak sah.
+8.	Implementasi di Perangkat Jaringan:
+•	Konfigurasi pada router, switch, dan perangkat jaringan lainnya.
+
+Untuk sesi praktikum menggunakan Langkah- Langkah seperti berikut ;
+Jaringan Komputer Lanjut 101
+A.	First Steps
+1.	Matikan Firewall seperti Windows Defender atau Antivirus lainnya
+2.	Sambungkan Laptop dengan MikroTik menggunakan kabel LAN
+3.	Buka WinBox → Neighbors → Cari yang MikroTik → Connect
+B.	Static (Manual)
+1.	Dalam WinBox → IP → Addresses
+2.	Tambahkan IP Address baru → Contohnya 192.168.10.1/24 → Sesuaikan interface dengan ether dari sambungan kabel LAN → Apply → Ok
+3.	Buka Control Panel untuk mengatur IP Laptop
+Control Panel → Network and Internet → Network and Sharing Center → Ethernet → Properties
+4.	Ubah IPv4 dengan double click → Use the following IP Address → Isi dengan 192.168.10.2 (2 karena 1 sudah digunakan MikroTik) → Tab untuk kolom yang lain → Ok
+5.	Lakukan Ping terhadap IP Laptop dalam Terminal WinBox
+C.	Bridge
+1.	Dalam WinBox → Bridge
+2.	Tambahkan Bridge baru → Apply → Ok
+3.	Tambahkan Bridge Port → Sesuaikan interface dengan ether yang digunakan → Sesuaikan Bridge dengan Bridge yang sudah dibuat → Apply → Ok
+4.	Tambahkan IP Address → Ubah interface dengan Bridge yang sudah dibuat → Apply → Ok
+5.	Tambahkan DHCP dengan DHCP Setup → Sesuaikan interface dengan Bridge yang sudah dibuat → Klik Next → Pada bagian DNS Servers ubah menjadi 8.8.8.8 → Klik Next sampai selesai
+6.	Buka Command Prompt → ipconfig → Lihat IPv4 Address → Lakukan Ping terhadap sesama Laptop (Laptop A melakukan Ping terhadap IP Laptop B dan sebaliknya)
+7.	Buka XAMPP dan nyalakan → Salin IP Address Laptop satu sama lain untuk melihat web XAMPP jika sudah tersambung
+D.	Static Routing
+1.	Sambungkan Laptop dengan MikroTik seperti berikut:
+•	Hubungkan MikroTik A → Laptop A → ether1
+•	Hubungkan MikroTik B → Laptop B → ether1
+•	Hubungkan kedua MikroTik → ether3
+2.	Dalam WinBox → IP → Addresses → Tambahkan IP Address seperti berikut:
+•	Laptop A → 192.168.1.1/24
+•	Laptop B → 192.168.10.1/24
+Tambahkan IP Address untuk MikroTik seperti berikut:
+•	Laptop A → 192.168.100.1/24
+•	Laptop B → 192.168.100.2/24
+3.	Tambahkan DHCP dengan DHCP Setup → Buat 2 DHCP dan sesuaikan dengan interface yang digunakan IP Address ether1 dan IP MikroTik ether3 → Klik Next → Pada bagian DNS Servers ubah menjadi 8.8.8.8 → Klik Next sampai selesai
+4.	Buka Control Panel → Network and Internet → Network and Sharing Center → Ethernet → Disable → Change adapter settings → Double click Ethernet untuk Enable kembali
+5.	Dalam WinBox → IP → Routes → Tambahkan Routes seperti berikut:
+•	Laptop A → Isi Destination dengan 192.168.10.0/24 dan Gateway dengan 192.168.100.2
+•	Laptop B → Isi Destination dengan 192.168.1.0/24 dan Gateway dengan 192.168.100.1
+6.	Buka Command Prompt → ipconfig → Lihat IPv4 Address → Lakukan Ping terhadap sesama Laptop (Laptop A melakukan Ping terhadap IP Mikrotik B dan Laptop B dan sebaliknya)
+7.	Lakukan “tracert -d (IP tujuan)” untuk mengecek jalur apa saja yang dilewati untuk mencapai IP tujuan → Contohnya Laptop A melakukan “tracert -d 192.168.10.1/24” dan Laptop B melakukan “tracert -d 192.168.1.1/24”
+E.	Dynamic Routing
+1.	
+F.	 
+
+Note : Guide dibawah gak bakal dihapus, ini yang diatas guide simpel aja biar gak belibet ama biar gampang dipahami. 👌
+Guide Jarkom Lanjut 
+
+
+1.	Static ( Manual )
+Langkah - Langkah 
+1.	Matikan Firewall jika ingin menggunakan winbox seperti windows defender atau antivirus lainnya. 
+2.	Buka winbox dan buat IP ADDRESS ( IP > Adresses > Apply > Ok )
+Buat seperti yang diatas jika kabel ada di ether 1 lakukan seperti yang diatas untuk address bebas ( Contoh menggunakan ip class c )
+3.	Lanjutkan Ke Control Panel untuk mengatur IP LAptop 
+Network Intermet > Network and sharing center > ethernet > Properties
+Kemudian klik 2 kali bagian IPv4
+Kemudian atur IP adress seperti yang diatas (192.168.10.2 ) kenapa 2 karena 1 sudah di gunakan di mikrotik lalu tab saja klik OK.
+4.	Lakukan ping terhadap Ip tersebut 
+Ping dinyatakan work jika seperti gambar diatas.
+Guide DHCP ( Otomatis )
+1.	Lakukan tahap 1 - 3 
+2.	Pastikan ip yang dibuat tidak sama dengan ip yang telah dibuat sebelumnya 
+3.	Lalu buka lagi control panel 
+Lalu ubah menjadi Obtain an Ip address automatically, Klik ok.
+4.	Lalu buka winbox > Ip > DHCP server > DHCP setup > Pilih ether yang digunakan
+Klik next lalu akan muncul seperti yang dibawah ini 
+Kemudian Lanjut ke Leases
+Jika sudah muncul, Lakukan ping terhadap ip tersebut (192.168.40.254)
+Tanda IP sudah aktid atau work.
+Guide Bridge
+1.Buat Bridge > Klik ikon +
+Jika sudah akan muncul seperti gambar dibawah 
+2.	Buat port 
+Pada saat membuat port sesuaikan dengan ether yang digunakan.
+Jika sudah akan muncul seperti gambar yang dibawah 
+3.	Buat Ip Adreess > Ubah interface bridge.
+4.	Buka DHCP server lalu setting ke bridge
+Pada saat di bagian DNS ubah menjadi 8.8.8.8
+5.	Buka XAMPP kemudian buka cmd lakukan IPCONFIG di laptop yang menyalakan XAMPP.
+Salin hasil IPv4 Address seperti gambar diatas yaitu 192.168.20.253.
+6.	Cek IP yang telah didapatkan di laptop satunya.
+7.	Cek ip yang disalin di laptop satunya.
+Akan muncul seperti jika berhasil.
+Guide routing
+Butuh Laptop Nopal (Mikrotik A)  dan Laptop Imam (Mikrotik B)
+Step :
+
+1.	Hubungkan Laptop Nopal dengan Mikrotik A di ether 1. 
+2.	Hubungkan Laptop Imam dengan Mikrotik B di ether 1.
+3.	Hubungkan kedua mikrotik di ether 3.
+Step Winbox : 
+1.	Buka winbox 
+2.	buka Ip address lalu bikin Ip 
+Laptop Nopal : 192.168.1.1/24
+Laptop Imam : 192.168.10.1/24
+3.	Buat Ip untuk mikrotik 
+Laptop Nopal : 192.168.100.1/24
+Laptop Imam : 192.168.100.2/24
+4.	Buat dhcp server > Dhcp setup > Buat 2 Dhcp setup sesuaikan ip address di ether 1 dan ip mikrotik di ether 3  > Dns server ubah menjadi 8.8.8.8 . 
+5.	Buka control panel > Internet/Network > Properties > Ethernet > Disable > Change adaptor setting > Double klik ethernet > enable.
+6.	Masuk winbox > Buka Ip > Routes > Tambah routes +
+Laptop Nopal : Isi destination dengan 192.168.10.0/24 dan gateway dengan 192.168.100.2 . 
+Laptop Imam : Isi destination dengan 192.168.1.0/24 dan gateway dengan 192.168.100.1 . 
+7.	Masuk cmd lalu lakukan ipconfig di kedua laptop.
+8.	Setelah mendapatkan ip masing-masing laptop, lakukan ping di laptop Nopal dengan ip laptop Imam dan mikrotik B dan lakukan ping di laptop imam dengan ip laptop Nopal dan mikrotik A.
+9.	lakukan tracert -d (masukan ip laptop nopal di laptop imam, sedangkan ip laptop imam di laptop nopal).
+
+Guide Routing Dynamic
+1.	Siapkan 2 mikrotik
+2.	Laptop imam dan dian  : mikrotik 1
+Laptop nopal dan tasya : mikrotik 2
+3.	Buatkan Ip Address
+Laptop imam > ether 1 > 192.168.1.1/24
+laptop dian > ether 3 > 192.168.3.1/24
+Laptop untuk router > ether 2 > 10.10.10.1/24
+dan , 
+Laptop Nopal > ether 1 > 192.168.2.1/24
+Laptop tasya > ether 3 > 192.168.4.1/24
+Laptop untuk router > ether 2 > 10.10.10.2/24
+4.	Buka routing > rip
+Buat interface masing - masing yaitu ether 1 dan ether 2 serta ether 3 (atau setting all )
+Network > laptop imam > 10.10.10.0/24 dan 192.168.1.0/24
+Network > laptop Nopal > 10.10.10.0/24 dan 192.168.2.0/24
+Network > laptop dian > 10.10.10.0/24 dan 192.168.3.0/24
+Network > laptop tasya > 10.10.10.0/24 dan 192.168.4.0/24
+5.	Buka dhcp server > dhcp setup > buat ip untuk masing masing laptop baik mikrotik 1 ataupun 2 (ip mikrotik tidak perlu dibuat)
+6.	 Buka cmd lakukan ipconfig lalu lakukan ping dari beberapa laptop.
+
+
+
+
+
+
